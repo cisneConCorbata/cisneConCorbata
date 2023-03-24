@@ -1,0 +1,658 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+
+/*sections*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  background-image: url("images/paper.jpg");
+  background-size: cover;
+}
+
+footer {
+  bottom:0;
+}
+
+/*elements*/
+
+h1{
+  font-size: 20px;
+  font-weight: 700;
+  color:#fe0273;
+}
+
+h2{
+  border:display;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color:#fe0273;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color:  rgba(255,255,255,.5);
+  border-color: #fe0273;
+  border-style: solid;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px 30px 0 0;
+  border-bottom: none;
+}
+
+h3{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color:#fe0273;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: white;
+  outline: #fe0273;
+  border: #fe0273;
+}
+
+a:active {
+  font-weight: 700;
+}
+
+button, .button{
+  cursor: pointer;
+  border:none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  transition: 0.3s;
+  width: 200px;
+}
+
+img {
+  pointer-events: none;
+}
+
+:focus{
+  background-color: rgba(255,255,255, .5);
+ }
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fe0273;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fe0273;
+} 
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #fe0273;
+}
+
+::selection {
+  color: white;
+  background: #fe0273;
+}
+
+/*header*/
+
+.menuLinks {
+  background-image: linear-gradient(to right, #fffabe, #fe0273);
+  height: 50px;
+  margin: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.menuButtons{
+  display: flex;
+  flex: row;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  text-align: center;
+}
+
+.menuLinks .menuButton{
+  width: 100px;
+}
+
+.menuLinks .burger {
+  display: none;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: auto;
+}
+
+.logo{
+  width:30px;
+  padding-right: 10px;
+}
+
+.menuButton, .menuIcon, .burger{
+  padding: 10px;
+  margin-left:10px;
+  color:white;
+  border-radius: 30px;
+}
+
+
+.menuButton:hover, .menuFilter.active, .menuFilter:hover, .button.active, .button:hover {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.menuButton:hover, .menuIcon:hover, .menuFilter.active, .menuFilter:hover, .button.active, .button:hover{
+  background-color: rgba(255,255,255, 1);
+  color: #fe0273;
+}
+
+.menuFilter.active, .menuFilter:hover, .button.active, .button:hover {
+  border: display;
+  border: #fe0273;
+  border-style: solid;
+}
+
+.menuFilter.active, .menuFilter:hover {
+  border-bottom: 0;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerContainer{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  margin-bottom: 150px;
+}
+
+.hello{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.6vw;
+  font-weight: 900;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+  mix-blend-mode: multiply;
+  margin-bottom: 100px;
+}
+
+.titleAnim{
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.titleAnim:hover{
+  transform: translate(0, -60px);
+}
+
+.bio{
+  text-align: center;
+  padding:0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  color: black;
+}
+
+/*gallery*/
+
+.tabs{
+  height: 40px;
+  margin:20px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.menuFilter {
+  cursor: pointer;
+  padding-top: 10px;
+  color:white;
+  background-color: rgba(254, 2, 115, 1);
+  margin-left: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  border-radius: 30px 30px 0 0;
+}
+
+.image-gallery {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(227px, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: row dense;
+  grid-gap: 0px;
+}
+
+.image-gallery .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.image-gallery .image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-gallery .image-box .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255,255,255, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.image-gallery .image-box:hover .overlay {
+  opacity: 1;
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+
+.icon {
+  color: #fe0273;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gallery{
+  display: block;
+  max-width: 1200px;
+  max-height: 650px;
+  object-fit: contain;
+  margin: auto;
+}
+
+/*contact*/
+
+.section3{
+  padding: 20px;
+}
+
+.emailMsg h2 {
+  margin-bottom: 0;
+}
+
+.emailMsg {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 0 30px 30px 30px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+  border-style: solid;
+  border-color: #fe0273;
+
+}
+
+.contactImg {
+  height: 60%;
+  margin: 20px;
+  animation-name: hello;
+  animation-iteration-count: infinite;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hello{
+  0% {transform: rotate(45deg);}
+  50% {transform: rotate(-45deg);}
+  100% {transform: rotate(45deg);}
+}
+
+.msg p {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emailMsg a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  transition: 0.3s;
+  background-color: #fe0273;
+  border-radius: 0 0 25px 25px;
+  height: 50px;
+  width: 100%;
+  border-style: solid;
+  border-color: #fe0273;
+}
+
+.emailMsg a:hover, .emailMsg a:active {
+  color: #fe0273;
+  background-color: white;
+  font-size: 14px;
+}
+
+.sendMsg{
+  display: none; /*block*/
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.sent{
+  display: none;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  height: 350px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.textSent{
+  position: relative;
+  top:35%;
+}
+
+.textSent .button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.message{
+  height: 200px;
+  resize: none;
+}
+
+.input, .message, .button{
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  outline: #fe0273;
+  border: #fe0273;
+ }
+
+.input:focus, .message:focus{
+  border: display;
+  border-style: solid;
+  transition: 0.1s;
+ }
+
+.input, .message, .button{
+  width: 92%;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+
+.button{
+  background-color: #fe0273;
+  color: white;
+  height: 40px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*footer*/
+
+.menuFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-image: linear-gradient(to right, #fffabe, #fe0273);
+  height: 30px;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.copy{
+  padding: 10px;
+  float: left;
+  color: #fe0273;
+}
+
+.menuFoot .menuButton{
+  width: 100px;
+}
+
+/*responsive*/
+
+@media (max-width: 1024px) {
+
+.headerContainer{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.hello{
+  margin-bottom: 60px;
+}
+
+.gallery{
+  max-width: 750px;
+  max-height: 406px;
+}
+
+.image-gallery {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+}
+
+.sendMsg, .emailMsg{
+  width: 60%;
+}
+}
+
+@media (max-width: 904px) {
+
+.menuLinks .menuButtons{
+  display: none;
+}
+
+.menuLinks.responsive .menuButton {
+  width: 86vw;
+  height: 25px;
+  display: flex;
+  flex: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menuLinks.responsive .menuIcon {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menuLinks .burger, .menuLinks.responsive .burger {
+  display: flex;
+}
+
+.menuLinks.responsive .menuButtons {
+  display: block;
+  position: absolute;
+  height: auto;
+  top: 50px;
+  background-color: #fe0273;
+  left: 0;
+  right: 0;
+  margin: 20px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+
+.headerContainer{
+  margin-top: 5px;
+  width: 70%;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.sendMsg, .emailMsg{
+  width: 70%;
+}
+
+.gallery{
+  max-width: 600px;
+  max-height: 325px;
+}
+
+.menu {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.title{
+  padding: 10px;
+}
+
+.menuFoot .menuButtons {
+  display: none;
+}
+
+.menuLinks.responsive .menuButton{
+  width: 80vw;
+  justify-content: center;
+}
+
+.menuLinks .burger, .menuLinks.responsive .burger {
+  display: flex;
+}
+
+}
+
+@media (max-width: 320px) {
+
+.title h1{
+  display: none;
+}
+
+.headerContainer{
+  width: 80%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.hello{
+  margin-bottom: 40px;
+}
+
+.sendMsg, .emailMsg{
+  width: 80%;
+}
+
+.gallery{
+  max-width: 300px;
+  max-height: 162px;
+}
+
+.image-gallery {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+}
+
+.vertical {
+  grid-row: span 1;
+}
+
+.horizontal {
+  grid-column: span 1;
+}
+
+.menuLinks.responsive .menuButton{
+  width: 70vw;
+}
+
+}

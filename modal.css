@@ -1,0 +1,105 @@
+/*animations*/
+
+@keyframes enter {
+  from {transform:translate(0,100%);
+    -ms-transform:translate(0,100%)}
+  to {transform:translate(0,0);
+    -ms-transform:translate(0,0);}
+}
+
+/*background*/ 
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+/* Modal Content */
+.modal-content{
+  display: block;
+  position: relative;
+  margin: auto;
+  width:auto;
+  background-color: white;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top:20px;
+  right:70px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  cursor: pointer;
+  rotate: 90deg;
+}
+
+.prev:hover, .next:hover{
+  background-color: white;
+  color: #fe0273;
+}
+
+.close:hover, .close:focus, .prev:hover, .next:hover{
+  transition: all 0.5s ease;
+}
+
+.mySlides {
+  display: none;
+  animation-name: enter;
+  animation-duration: 0.6s;
+  padding: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  padding: 17px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #fe0273;
+}
+
+.prev {
+  left: 50px;
+}
+
+.next {
+  right: 50px;
+}
+
+/*responsive*/
+
+@media (max-width: 768px) {
+
+.close {
+  top:10px;
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+}
