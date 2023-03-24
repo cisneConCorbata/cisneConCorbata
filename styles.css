@@ -358,7 +358,7 @@ img {
   margin-top: 0px;
   border-style: solid;
   border-color: #fe0273;
-
+  text-align: center;
 }
 
 .contactImg {
@@ -382,6 +382,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .emailMsg a {
@@ -611,13 +612,13 @@ img {
   display: flex;
 }
 
+.emailMsg a {
+  font-size: 14px;
 }
 
-@media (max-width: 320px) {
-
-.title h1{
-  display: none;
 }
+
+@media (max-width: 378px) {
 
 .headerContainer{
   width: 80%;
@@ -631,6 +632,14 @@ img {
 
 .sendMsg, .emailMsg{
   width: 80%;
+}
+
+.msg {
+  border-radius: 0 10px 10px 10px;
+}
+
+.emailMsg a {
+  border-radius: 0 0 5px 5px;
 }
 
 .gallery{
